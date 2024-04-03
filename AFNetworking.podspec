@@ -1,5 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'AFNetworking'
+  s.version  = '1.0.0'
   s.license  = 'MIT'
   s.summary  = 'A delightful networking framework for Apple platforms.'
   s.homepage = 'https://github.com/wangjunhua1/AFNetworking'
@@ -17,7 +18,7 @@ Pod::Spec.new do |s|
   s.watchos.pod_target_xcconfig = { 'PRODUCT_BUNDLE_IDENTIFIER' => 'com.alamofire.AFNetworking-watchOS' }
   s.tvos.pod_target_xcconfig = { 'PRODUCT_BUNDLE_IDENTIFIER' => 'com.alamofire.AFNetworking' }
 
-  s.source_files = 'AFNetworking/AFNetworking.h', 'AFNetworking/PrivacyInfo.xcprivacy'
+  s.source_files = 'AFNetworking/AFNetworking.h'
 
   s.subspec 'Serialization' do |ss|
     ss.source_files = 'AFNetworking/AFURL{Request,Response}Serialization.{h,m}'
@@ -42,7 +43,7 @@ Pod::Spec.new do |s|
     ss.tvos.dependency 'AFNetworking/Reachability'
     ss.dependency 'AFNetworking/Security'
 
-    ss.source_files = 'AFNetworking/AF{URL,HTTP}SessionManager.{h,m}', 'AFNetworking/AFCompatibilityMacros.h'
+    ss.source_files = 'AFNetworking/AF{URL,HTTP}SessionManager.{h,m}', 'AFNetworking/AFCompatibilityMacros.h', 'AFNetworking/PrivacyInfo.xcprivacy'
   end
 
   s.subspec 'UIKit' do |ss|
