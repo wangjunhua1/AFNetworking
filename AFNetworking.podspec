@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
     ss.osx.deployment_target = '10.10'
     ss.tvos.deployment_target = '9.0'
 
-    ss.source_files = 'AFNetworking/AFNetworkReachabilityManager.{h,m}'
+    ss.source_files = 'AFNetworking/AFNetworkReachabilityManager.{h,m}', 'AFNetworking/PrivacyInfo.xcprivacy'
   end
 
   s.subspec 'NSURLSession' do |ss|
