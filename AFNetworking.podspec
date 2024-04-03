@@ -12,6 +12,8 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.10'
   s.watchos.deployment_target = '2.0'
   s.tvos.deployment_target = '9.0'
+  s.resource_bundles = {'AFNetworking' => ['AFNetworking/PrivacyInfo.xcprivacy']}
+
 
   s.ios.pod_target_xcconfig = { 'PRODUCT_BUNDLE_IDENTIFIER' => 'com.alamofire.AFNetworking' }
   s.osx.pod_target_xcconfig = { 'PRODUCT_BUNDLE_IDENTIFIER' => 'com.alamofire.AFNetworking' }
@@ -33,7 +35,7 @@ Pod::Spec.new do |s|
     ss.osx.deployment_target = '10.10'
     ss.tvos.deployment_target = '9.0'
 
-    ss.source_files = 'AFNetworking/AFNetworkReachabilityManager.{h,m}', 'AFNetworking/PrivacyInfo.xcprivacy'
+    ss.source_files = 'AFNetworking/AFNetworkReachabilityManager.{h,m}'
   end
 
   s.subspec 'NSURLSession' do |ss|
